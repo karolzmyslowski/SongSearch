@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQc-dn-faT">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchVC" customModule="SongSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9g1-GN-mr5">
+                                <rect key="frame" x="16" y="36" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eF9-DG-ONw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dkT-7R-aqW">
+                                <rect key="frame" x="0.0" y="120" width="320" height="399"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="137" id="voI-0G-3qQ" customClass="SearchTableViewCell" customModule="SongSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="137"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="voI-0G-3qQ" id="BPO-sw-AZr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-67-bEx" customClass="SearchView" customModule="SongSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="8" width="289" height="121"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-qR-P4F">
+                                                            <rect key="frame" x="16" y="11" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="Z0q-RO-xPe"/>
+                                                                <constraint firstAttribute="width" constant="100" id="kGP-vi-zQH"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rms-To-udV">
+                                                            <rect key="frame" x="124" y="22" width="97" height="78"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="6ed-WV-9SF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-C9-hzd">
+                                                                    <rect key="frame" x="0.0" y="30" width="97" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="GFP-vX-gV9">
+                                                                    <rect key="frame" x="0.0" y="60" width="97" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-12-PHx" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                                            <rect key="frame" x="229" y="46" width="52" height="30"/>
+                                                            <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="4kd-3t-ECx"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Save"/>
+                                                            <connections>
+                                                                <action selector="saveBtnPressed:" destination="voI-0G-3qQ" eventType="touchUpInside" id="LxF-gr-yG6"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="rzD-qR-P4F" firstAttribute="leading" secondItem="Qkt-67-bEx" secondAttribute="leading" constant="16" id="4hz-MU-QCE"/>
+                                                        <constraint firstItem="rms-To-udV" firstAttribute="centerY" secondItem="Qkt-67-bEx" secondAttribute="centerY" id="5Tu-ED-eA4"/>
+                                                        <constraint firstItem="rms-To-udV" firstAttribute="leading" secondItem="rzD-qR-P4F" secondAttribute="trailing" constant="8" id="BQD-KZ-pRv"/>
+                                                        <constraint firstItem="YJW-12-PHx" firstAttribute="centerY" secondItem="Qkt-67-bEx" secondAttribute="centerY" id="DJb-yY-M2t"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YJW-12-PHx" secondAttribute="trailing" constant="8" id="Jhh-ks-COB"/>
+                                                        <constraint firstItem="rzD-qR-P4F" firstAttribute="centerY" secondItem="Qkt-67-bEx" secondAttribute="centerY" id="cSy-w6-aBs"/>
+                                                        <constraint firstItem="YJW-12-PHx" firstAttribute="leading" secondItem="rms-To-udV" secondAttribute="trailing" constant="8" id="wWv-Zl-Ufw"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qkt-67-bEx" secondAttribute="trailing" id="8Dc-SF-6AL"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qkt-67-bEx" secondAttribute="bottom" constant="8" id="NlT-bK-Cpp"/>
+                                                <constraint firstItem="Qkt-67-bEx" firstAttribute="top" secondItem="BPO-sw-AZr" secondAttribute="top" constant="8" id="Vo0-zj-zL8"/>
+                                                <constraint firstItem="Qkt-67-bEx" firstAttribute="leading" secondItem="BPO-sw-AZr" secondAttribute="leading" constant="16" id="pVE-vn-iyU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <connections>
+                                            <outlet property="artistLbn" destination="RXi-C9-hzd" id="ruh-dQ-ePe"/>
+                                            <outlet property="collectionLbn" destination="GFP-vX-gV9" id="pOk-PM-zu7"/>
+                                            <outlet property="imageSong" destination="rzD-qR-P4F" id="Ibm-U1-han"/>
+                                            <outlet property="titleLbn" destination="6ed-WV-9SF" id="Tpb-em-Ot0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y3H-P7-D69"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JtX-9l-vbe"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH7-ZA-gP9" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                <rect key="frame" x="16" y="78" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WRZ-zm-T6y"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdf-bV-F84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78024488687515259" green="0.780070960521698" blue="0.80069750547409058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9g1-GN-mr5" secondAttribute="trailing" constant="16" id="0iC-7X-gzI"/>
+                            <constraint firstItem="mH7-ZA-gP9" firstAttribute="top" secondItem="9g1-GN-mr5" secondAttribute="bottom" constant="12" id="70C-F2-i0Q"/>
+                            <constraint firstItem="9g1-GN-mr5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7iJ-p6-GYC"/>
+                            <constraint firstItem="dkT-7R-aqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BrW-qM-A8T"/>
+                            <constraint firstItem="dkT-7R-aqW" firstAttribute="top" secondItem="mH7-ZA-gP9" secondAttribute="bottom" constant="12" id="H7x-tD-hjz"/>
+                            <constraint firstItem="mH7-ZA-gP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nTJ-QU-AIK"/>
+                            <constraint firstItem="9g1-GN-mr5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="qKI-jc-mJt"/>
+                            <constraint firstItem="dkT-7R-aqW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sGt-Sr-5Bz"/>
+                            <constraint firstItem="dkT-7R-aqW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sKB-6T-fSx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mH7-ZA-gP9" secondAttribute="trailing" constant="16" id="vNT-8X-nBN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="0tZ-tc-H0k">
+                        <color key="badgeColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="constraintTopView" destination="sGt-Sr-5Bz" id="zbw-1y-bYM"/>
+                        <outlet property="searchTextField" destination="9g1-GN-mr5" id="3N1-R7-XA6"/>
+                        <outlet property="tableView" destination="dkT-7R-aqW" id="Uoj-lK-cAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.375" y="-53.87323943661972"/>
+        </scene>
+        <!--DataVC-->
+        <scene sceneID="BSz-aE-Gnj">
+            <objects>
+                <viewController id="bZk-b2-lLe" customClass="DataVC" customModule="SongSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4Y-d4-ZLg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-u6-nv9">
+                                <rect key="frame" x="0.0" y="120" width="320" height="399"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataCell" rowHeight="137" id="4Du-Qv-tcR" customClass="DataTableViewCell" customModule="SongSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="137"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Du-Qv-tcR" id="tmf-qc-zkc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vm3-2L-klp" customClass="SearchView" customModule="SongSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="8" width="288" height="121"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fq-dQ-G3l">
+                                                            <rect key="frame" x="16" y="10" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="gFf-VR-xzg"/>
+                                                                <constraint firstAttribute="width" constant="100" id="hzf-BV-vsX"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPj-Ka-ZAK" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                                            <rect key="frame" x="228" y="45" width="52" height="30"/>
+                                                            <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Mkc-Ot-wWh"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Delete"/>
+                                                            <connections>
+                                                                <action selector="daleteButtonTapped:" destination="4Du-Qv-tcR" eventType="touchUpInside" id="9aY-kk-Mrv"/>
+                                                            </connections>
+                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1lX-2l-I6C">
+                                                            <rect key="frame" x="124" y="22" width="96" height="78"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-y0-f1A">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ad5-hV-Xhd">
+                                                                    <rect key="frame" x="0.0" y="30" width="96" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="guC-XT-7Ad">
+                                                                    <rect key="frame" x="0.0" y="60" width="96" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FPj-Ka-ZAK" firstAttribute="centerY" secondItem="vm3-2L-klp" secondAttribute="centerY" id="7OT-B0-MsL"/>
+                                                        <constraint firstItem="FPj-Ka-ZAK" firstAttribute="leading" secondItem="1lX-2l-I6C" secondAttribute="trailing" constant="8" id="90s-kM-Frc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FPj-Ka-ZAK" secondAttribute="trailing" constant="8" id="9jh-e5-D9k"/>
+                                                        <constraint firstItem="1lX-2l-I6C" firstAttribute="centerY" secondItem="vm3-2L-klp" secondAttribute="centerY" id="MbK-cl-CmK"/>
+                                                        <constraint firstItem="3fq-dQ-G3l" firstAttribute="centerY" secondItem="vm3-2L-klp" secondAttribute="centerY" id="qYZ-TT-vQM"/>
+                                                        <constraint firstItem="3fq-dQ-G3l" firstAttribute="leading" secondItem="vm3-2L-klp" secondAttribute="leading" constant="16" id="rnv-jm-Sou"/>
+                                                        <constraint firstItem="1lX-2l-I6C" firstAttribute="leading" secondItem="3fq-dQ-G3l" secondAttribute="trailing" constant="8" id="tGG-mw-6c0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vm3-2L-klp" firstAttribute="top" secondItem="tmf-qc-zkc" secondAttribute="top" constant="8" id="Dgp-yB-G5a"/>
+                                                <constraint firstAttribute="trailing" secondItem="vm3-2L-klp" secondAttribute="trailing" constant="16" id="bDP-7b-zyt"/>
+                                                <constraint firstItem="vm3-2L-klp" firstAttribute="leading" secondItem="tmf-qc-zkc" secondAttribute="leading" constant="16" id="frU-Yd-iy5"/>
+                                                <constraint firstAttribute="bottom" secondItem="vm3-2L-klp" secondAttribute="bottom" constant="8" id="lhd-jE-TrM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLbn" destination="Ad5-hV-Xhd" id="FPy-wB-2kZ"/>
+                                            <outlet property="artworImg" destination="3fq-dQ-G3l" id="89P-zZ-MPW"/>
+                                            <outlet property="collectionLbn" destination="guC-XT-7Ad" id="eZS-9f-F95"/>
+                                            <outlet property="titleLbn" destination="TcY-y0-f1A" id="hZa-CW-J03"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bZk-b2-lLe" id="sl8-QY-Fll"/>
+                                    <outlet property="delegate" destination="bZk-b2-lLe" id="FDq-TQ-0BP"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pHE-rW-dOz">
+                                <rect key="frame" x="16" y="36" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.78808718919754028" green="0.78791451454162598" blue="0.80853986740112305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cVK-Hm-A9o"/>
+                                </constraints>
+                                <color key="tintColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Artist</string>
+                                    <string>Collection</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rua-dr-qef" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                <rect key="frame" x="16" y="78" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qFd-Wz-Eb1"/>
+                                </constraints>
+                                <state key="normal" title="Search By">
+                                    <color key="titleColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortByButtonPressed:" destination="bZk-b2-lLe" eventType="touchUpInside" id="00e-Wg-D2o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78024488687515259" green="0.780070960521698" blue="0.80069750547409058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nP4-u6-nv9" firstAttribute="bottom" secondItem="fx5-70-jtY" secondAttribute="bottom" id="420-Fn-Prj"/>
+                            <constraint firstItem="rua-dr-qef" firstAttribute="top" secondItem="pHE-rW-dOz" secondAttribute="bottom" constant="12" id="4Kr-iD-KHb"/>
+                            <constraint firstItem="nP4-u6-nv9" firstAttribute="top" secondItem="rua-dr-qef" secondAttribute="bottom" constant="12" id="Ksg-e4-Sbh"/>
+                            <constraint firstItem="pHE-rW-dOz" firstAttribute="trailing" secondItem="fx5-70-jtY" secondAttribute="trailing" constant="-16" id="QSy-iB-cvC"/>
+                            <constraint firstItem="fx5-70-jtY" firstAttribute="trailing" secondItem="rua-dr-qef" secondAttribute="trailing" constant="16" id="Qv3-3V-Sfr"/>
+                            <constraint firstItem="nP4-u6-nv9" firstAttribute="trailing" secondItem="fx5-70-jtY" secondAttribute="trailing" id="kNn-fD-Qon"/>
+                            <constraint firstItem="rua-dr-qef" firstAttribute="leading" secondItem="fx5-70-jtY" secondAttribute="leading" constant="16" id="quW-CD-XKk"/>
+                            <constraint firstItem="nP4-u6-nv9" firstAttribute="leading" secondItem="fx5-70-jtY" secondAttribute="leading" id="tea-uR-r8f"/>
+                            <constraint firstItem="pHE-rW-dOz" firstAttribute="top" secondItem="fx5-70-jtY" secondAttribute="top" constant="16" id="vSY-mL-OS4"/>
+                            <constraint firstItem="pHE-rW-dOz" firstAttribute="leading" secondItem="fx5-70-jtY" secondAttribute="leading" constant="16" id="xDm-YQ-oZv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fx5-70-jtY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="UXl-kb-Cmc">
+                        <color key="badgeColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="constraintTopView" destination="420-Fn-Prj" id="0tI-2s-q3k"/>
+                        <outlet property="searchBar" destination="pHE-rW-dOz" id="5p8-9h-VSY"/>
+                        <outlet property="tableView" destination="nP4-u6-nv9" id="G4o-NE-cLa"/>
+                        <segue destination="JDK-Ge-eMK" kind="presentation" identifier="popup" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="3vM-ld-gxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pen-Ww-hfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027.5" y="645.42253521126759"/>
+        </scene>
+        <!--PopupVC-->
+        <scene sceneID="pgT-iE-eyM">
+            <objects>
+                <viewController id="JDK-Ge-eMK" customClass="PopupVC" customModule="SongSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="GHG-lO-tdb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kX3-ur-06A">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZD-jQ-A69">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <connections>
+                                        <action selector="dismissPopup:" destination="JDK-Ge-eMK" eventType="touchUpInside" id="MYk-vD-75b"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-h2-HbS" customClass="SearchView" customModule="SongSearch" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="184" width="240" height="200"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-3K-b36">
+                                            <rect key="frame" x="30" y="33" width="180" height="134"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O5-WL-Ygd" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="36"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Title">
+                                                        <color key="titleColor" red="0.26647508144378662" green="0.46108824014663696" blue="0.57367855310440063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="JDK-Ge-eMK" eventType="touchUpInside" id="qLn-MJ-qJR"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-48-7tu" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="49" width="180" height="36"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Artist">
+                                                        <color key="titleColor" red="0.26647508144378662" green="0.46108824014663696" blue="0.57367855310440063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="JDK-Ge-eMK" eventType="touchUpInside" id="vL4-Bs-oga"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbm-ik-b0l" customClass="SearchButton" customModule="SongSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="98" width="180" height="36"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Collection">
+                                                        <color key="titleColor" red="0.26647508144378662" green="0.46108824014663696" blue="0.57367855310440063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="JDK-Ge-eMK" eventType="touchUpInside" id="KpD-PO-hZN"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="9tu-3K-b36" firstAttribute="leading" secondItem="8mZ-h2-HbS" secondAttribute="leading" constant="30" id="Otv-NY-2fw"/>
+                                        <constraint firstAttribute="trailing" secondItem="9tu-3K-b36" secondAttribute="trailing" constant="30" id="REx-q4-drN"/>
+                                        <constraint firstAttribute="bottom" secondItem="9tu-3K-b36" secondAttribute="bottom" constant="33" id="RHp-vP-5Be"/>
+                                        <constraint firstAttribute="height" constant="200" id="hQU-uL-I5V"/>
+                                        <constraint firstAttribute="width" constant="240" id="xz2-Ov-Tuy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="8mZ-h2-HbS" firstAttribute="centerY" secondItem="kX3-ur-06A" secondAttribute="centerY" id="0YX-7J-0U7"/>
+                                <constraint firstItem="PZD-jQ-A69" firstAttribute="leading" secondItem="kX3-ur-06A" secondAttribute="leading" id="2H7-tc-udn"/>
+                                <constraint firstAttribute="trailing" secondItem="PZD-jQ-A69" secondAttribute="trailing" id="6iz-8f-Ljm"/>
+                                <constraint firstAttribute="bottom" secondItem="PZD-jQ-A69" secondAttribute="bottom" id="7Jk-oo-q7F"/>
+                                <constraint firstItem="PZD-jQ-A69" firstAttribute="top" secondItem="kX3-ur-06A" secondAttribute="top" id="Z9I-AW-hTZ"/>
+                                <constraint firstItem="8mZ-h2-HbS" firstAttribute="centerX" secondItem="kX3-ur-06A" secondAttribute="centerX" id="xsr-Jc-RLm"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDs-6o-UDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="645"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ipk-6J-Csw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zQc-dn-faT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qo6-0i-Cpd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SOk-82-T4v"/>
+                        <segue destination="bZk-b2-lLe" kind="relationship" relationship="viewControllers" id="IYX-cd-ei1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hy-ph-SzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="276"/>
+        </scene>
+    </scenes>
+</document>
